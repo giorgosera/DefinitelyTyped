@@ -70,7 +70,7 @@ export interface AccessToken {
     expired(expirationWindowSeconds?: number): boolean;
 
     /** Refresh the access token */
-    refresh(params?: {}): Promise<AccessToken>;
+    refresh(params?: {}, httpOptions?: {}): Promise<AccessToken>;
 
     /** Revoke access or refresh token */
     revoke(tokenType: TokenType): Promise<void>;
